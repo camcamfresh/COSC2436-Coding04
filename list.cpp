@@ -1,11 +1,3 @@
-/* Author: Cameron Salazar
- * Assignment: coding03 - Linked List
- * Data: 6/20/2019
- * Purpose: The purpose of this program is to test the implementation of a linked list.
- *		The main.cpp test the linked list object, list.cpp is responsible for organizing
- *		& controlling the list, node.h contains structures needed for list and main.
-*/
-
 #include "list.h"
 
 List::List(){
@@ -111,6 +103,7 @@ bool List::clear(){
 		node = node->next;
 		delete node->last;
 	}
+	delete node;
 	head = NULL;
 	size = 0;
 	return true;
