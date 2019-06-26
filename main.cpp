@@ -1,6 +1,7 @@
 #include "main.h"
 
 int main(int argc, char ** argv){
+	srand (time(NULL));
 	HashTable myTable;
 	cout << "Beginning Test..." << endl;
 	if(argc != 2){
@@ -55,7 +56,7 @@ int main(int argc, char ** argv){
 			myTable.add(123, "testing") ? cout << "SUCCESS??" << endl : cout << "failed (intentional)" << endl;
 			cout << "Reading size of table: " << myTable.getCount() << endl;
 			
-			cout << "\nAdding ID 142 to the table (also remainder of 9)...";
+			cout << "\nAdding ID 142 to the table (also remainder of 9 when % 19)... ";
 			myTable.add(142, "testing") ? cout << "success" << endl : cout << "FAILED" << endl;
 			cout << "Reading size of table: " << myTable.getCount() << endl;
 			
@@ -77,8 +78,28 @@ int main(int argc, char ** argv){
 			cout << "\nIs table empty?... ";
 			myTable.isEmpty() ? cout << "no" : cout << "YES?????";
 			
+			cout << "\n\nSelecting Random ID: ";
+			int id = rand() % 900 + 100;
+			while(!myTable.contains(id)) id = rand() % 900 + 100;
+			cout << id << endl;
+			cout << "Getting Value of ID: " << id << " : " << myTable.getValue(id);
 			
+			cout << "\n\nSelecting Another Random ID: ";
+			id = rand() % 900 + 100;
+			while(!myTable.contains(id)) id = rand() % 900 + 100;
+			cout << id << endl;
+			cout << "Getting Value of ID: " << id << " : " << myTable.getValue(id);
 			
+			cout << "\n\nAttempting to clear table... ";
+			myTable.clear() ? cout << "success\n" << endl : cout << "FAILED????\n" << endl;
+			
+			cout << "Reading size of table: " << myTable.getCount() << endl;
+			
+			cout << "Attempting to remove ID of 100... ";
+			myTable.remove(100) ? cout << "SUCCESS??\n\n" : cout << "failed (intentional)\n\n";
+			
+			cout << "Transversing table...." << endl;
+			myTable.transverse();
 		}
 	}
 }
