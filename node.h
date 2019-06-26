@@ -1,5 +1,5 @@
-#ifndef LINKED_LIST_DATA_H
-#define LINKED_LIST_DATA_H
+#ifndef HASH_TABLE_DATA_H
+#define HASH_TABLE_DATA_H
 
 #include <string>
 
