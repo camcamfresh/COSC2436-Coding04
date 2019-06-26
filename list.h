@@ -20,7 +20,7 @@ public:
 	
 	bool addNode(int, std::string);
 	bool deleteNode(int);
-	bool getNode(int, DataNode *);
+	bool getNode(int, DataNode * = NULL);
 	
 	bool clear();
 	int getCount();

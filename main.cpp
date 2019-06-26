@@ -25,4 +25,7 @@ int main(int argc, char ** argv){
 			}
 		}
 	}
+	myTable.remove(100);
+	cout << myTable.contains(100) << endl;
+	myTable.transverse();
 }

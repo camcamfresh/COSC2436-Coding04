@@ -65,13 +65,17 @@ bool List::deleteNode(int id){
 bool List::getNode(int id, DataNode * output){
 	Node * node = (Node *) searchList(id);
 	if(node){
-		output->id = node->id;
-		output->data = node->data;
+		if(output){
+			output->id = node->id;
+			output->data = node->data;
+		}
 		return true;
 	}
 	else{
-		output->id = -1;
-		output->data = "";
+		if(output){
+			output->id = -1;
+			output->data = "";
+		}
 		return false;
 	}
 }
