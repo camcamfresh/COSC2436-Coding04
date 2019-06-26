@@ -8,7 +8,6 @@ HashTable::HashTable(){
 HashTable::~HashTable(){
 	for(int i = 0; i < TABLESIZE; i++)
 		delete table[i];
-	size = 0;
 }
 	
 bool HashTable::add(int id, std::string data){

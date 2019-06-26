@@ -6,4 +6,6 @@
 #include <fstream>
 using namespace std;
 
+string trim(string);
+
 #endif
