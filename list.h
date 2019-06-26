@@ -1,5 +1,5 @@
-#ifndef LINKED_LIST_LIST_H
-#define LINKED_LIST_LIST_H
+#ifndef HASH_TABLE_LIST_H
+#define HASH_TABLE_LIST_H
 
 #include "node.h"
 #include <iostream>
